@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hashlist version="1.0">
+
+  <creatorinfo>
+    <name>Anna,,,</name>
+    <username>anna</username>
+    <hostname>ubuntu-12</hostname>
+    <tool>mhlcreate v0.0</tool>
+    <startdate>2012-12-14 16-54-27</startdate>
+    <finishdate>2012-12-14 16-54-27</finishdate>
+  </creatorinfo>
+
+  <hash>
+    <file>mixed_корейский_한국의_dir/한국어의파일</file>
+    <size>277</size>
+    <lastmodificationdate>2012-12-14 14-48-50</lastmodificationdate>
+    <md5 bit="128" encoding="hex">d29593e2cf81c621fb3c4089f9bbde4a</md5>
+    <hashdate>2012-12-14 16-54-27</hashdate>
+  </hash>
+
+  <hash>
+    <file>mixed_корейский_한국의_dir/CAFÉ.txt</file>
+    <size>277</size>
+    <lastmodificationdate>2012-12-14 16-00-18</lastmodificationdate>
+    <md5 bit="128" encoding="hex">d29593e2cf81c621fb3c4089f9bbde4a</md5>
+    <hashdate>2012-12-14 16-54-27</hashdate>
+  </hash>
+
+  <hash>
+    <file>mixed_корейский_한국의_dir/korean_корейский_한국의</file>
+    <size>277</size>
+    <lastmodificationdate>2012-12-14 14-48-50</lastmodificationdate>
+    <md5 bit="128" encoding="hex">d29593e2cf81c621fb3c4089f9bbde4a</md5>
+    <hashdate>2012-12-14 16-54-27</hashdate>
+  </hash>
+
+  <hash>
+    <file>mixed_корейский_한국의_dir/russian_файлнарусском.тхт</file>
+    <size>277</size>
+    <lastmodificationdate>2012-12-14 14-48-50</lastmodificationdate>
+    <md5 bit="128" encoding="hex">d29593e2cf81c621fb3c4089f9bbde4a</md5>
+    <hashdate>2012-12-14 16-54-27</hashdate>
+  </hash>
+
+  <hash>
+    <file>mixed_корейский_한국의_dir/słowo.avi</file>
+    <size>277</size>
+    <lastmodificationdate>2012-12-14 16-51-18</lastmodificationdate>
+    <md5 bit="128" encoding="hex">d29593e2cf81c621fb3c4089f9bbde4a</md5>
+    <hashdate>2012-12-14 16-54-27</hashdate>
+  </hash>
+
+  <hash>
+    <file>mixed_корейский_한국의_dir/Straße</file>
+    <size>277</size>
+    <lastmodificationdate>2012-12-14 14-48-50</lastmodificationdate>
+    <md5 bit="128" encoding="hex">d29593e2cf81c621fb3c4089f9bbde4a</md5>
+    <hashdate>2012-12-14 16-54-27</hashdate>
+  </hash>
+
+  <hash>
+    <file>mixed_корейский_한국의_dir/Türk_dosya</file>
+    <size>277</size>
+    <lastmodificationdate>2012-12-14 16-47-08</lastmodificationdate>
+    <md5 bit="128" encoding="hex">d29593e2cf81c621fb3c4089f9bbde4a</md5>
+    <hashdate>2012-12-14 16-54-27</hashdate>
+  </hash>
+
+  <hash>
+    <file>mixed_корейский_한국의_dir/ملف_باللغة_العربية</file>
+    <size>277</size>
+    <lastmodificationdate>2012-12-14 15-59-55</lastmodificationdate>
+    <md5 bit="128" encoding="hex">d29593e2cf81c621fb3c4089f9bbde4a</md5>
+    <hashdate>2012-12-14 16-54-27</hashdate>
+  </hash>
+
+  <hash>
+    <file>mixed_корейский_한국의_dir/קובץ_בעברית</file>
+    <size>277</size>
+    <lastmodificationdate>2012-12-14 16-38-27</lastmodificationdate>
+    <md5 bit="128" encoding="hex">d29593e2cf81c621fb3c4089f9bbde4a</md5>
+    <hashdate>2012-12-14 16-54-27</hashdate>
+  </hash>
+
+  <hash>
+    <file>mixed_корейский_한국의_dir/αρχείο_στην_ελληνική_γλώσσα</file>
+    <size>277</size>
+    <lastmodificationdate>2012-12-14 16-49-23</lastmodificationdate>
+    <md5 bit="128" encoding="hex">d29593e2cf81c621fb3c4089f9bbde4a</md5>
+    <hashdate>2012-12-14 16-54-27</hashdate>
+  </hash>
+
+  <hash>
+    <file>mixed_корейский_한국의_dir/ήλιος.txt</file>
+    <size>277</size>
+    <lastmodificationdate>2012-12-14 14-48-50</lastmodificationdate>
+    <md5 bit="128" encoding="hex">d29593e2cf81c621fb3c4089f9bbde4a</md5>
+    <hashdate>2012-12-14 16-54-27</hashdate>
+  </hash>
+
+  <hash>
+    <file>mixed_корейский_한국의_dir/हिन्दी_में_फ़ाइल</file>
+    <size>277</size>
+    <lastmodificationdate>2012-12-14 16-40-46</lastmodificationdate>
+    <md5 bit="128" encoding="hex">d29593e2cf81c621fb3c4089f9bbde4a</md5>
+    <hashdate>2012-12-14 16-54-27</hashdate>
+  </hash>
+
+  <hash>
+    <file>mixed_корейский_한국의_dir/文件在中國</file>
+    <size>277</size>
+    <lastmodificationdate>2012-12-14 16-43-01</lastmodificationdate>
+    <md5 bit="128" encoding="hex">d29593e2cf81c621fb3c4089f9bbde4a</md5>
+    <hashdate>2012-12-14 16-54-27</hashdate>
+  </hash>
+
+  <hash>
+    <file>mixed_корейский_한국의_dir/日本語ファ_イル.txt</file>
+    <size>277</size>
+    <lastmodificationdate>2012-12-14 14-48-50</lastmodificationdate>
+    <md5 bit="128" encoding="hex">d29593e2cf81c621fb3c4089f9bbde4a</md5>
+    <hashdate>2012-12-14 16-54-27</hashdate>
+  </hash>
+
+</hashlist>

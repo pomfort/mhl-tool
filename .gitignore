@@ -1,0 +1,15 @@
+# xcode noise
+*.pbxuser
+*.perspectivev3
+*.mode1v3
+*.xcuserdatad
+*.xccheckout
+
+
+# osx noise
+.DS_Store
+profile
+
+
+bin
+*.pyc

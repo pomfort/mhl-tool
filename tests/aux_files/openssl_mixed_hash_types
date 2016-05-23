@@ -1,0 +1,4 @@
+MD5(test_dir2/hash-list.txt)= d29593e2cf81c621fb3c4089f9bbde4a
+SHA1(test_dir2/hash-list-small.txt)= d652f950ec410728593d2594e46321854fdcc831
+MD5(test_dir2/hash-list-small.txt)= 62b43e0a61871e2e0559ddf3fc5c2922
+SHA1(test_dir2/hash-list1.txt)= 1cf879ba7d01a314d5cb737790873a7457f436fd

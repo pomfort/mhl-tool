@@ -1,0 +1,54 @@
+Feature: Check how MHL tools work with Non-ASCII characters in file paths
+
+    Scenario Outline: Only non-ASCII characters in filepaths, system default NFC & NFD
+        Given I'm using 'windows-1251' charset in filepaths
+        And I have the files
+        | orig_number | filename             |
+        | 1           | русский              |
+        | 2           | файлнарусском        |
+        | 3           | русский_file.txt           |
+        | 4           | russian_файлнарусском.тхт  |
+        And I am using the following directory names
+        | orig_number | dirname              |
+        | 1           | нарусскомкаталог     |
+        | 2           | russian-каталог      |
+        When I create the directory tree with the following structure in "test_dir"
+        | directory_numbered_path | file_numbers |
+        | 2/1                       | 1, 2         |
+        | 2/2                       | 3, 4         |
+        | 2/1/2                     | 1, 2, 3, 4    |
+        And for the given files I run openssl from "<work_d1>" to make md5 hash and redirect output to 'mhl file -s -o "<mhl_dir>"' as input
+        Then the '.mhl' file is created in "<mhl_dir>" relative to "<work_d1>"
+        And the return code is 0
+        And I run '<command>' from "<work_d2>" with '<options>'
+        And the return code is 0.
+
+    Examples:
+        | work_d1 | mhl_dir | command | work_d2 | options |
+        | test_dir| . | mhl verify | test_dir | -v -f *.mhl |
+        | test_dir/testname_dir(2) | . | mhl verify | test_dir | -v -f testname_dir(2)/*.mhl |
+        | test_dir | testname_dir(2) | mhl verify | test_dir | -v -e -f testname_dir(2)/*.mhl testname_dir(2)/testname_dir(1)/testname_dir(2)/* |
+        | test_dir| . | mhl hash | test_dir | -h d29593e2cf81c621fb3c4089f9bbde4a -f testname_dir(2)/testname_dir(2)/testname_file(3) |
+        | test_dir| testname_dir(2) | mhl hash | test_dir/testname_dir(2) | -h d29593e2cf81c621fb3c4089f9bbde4a -f testname_dir(1)/testname_dir(2)/testname_file(4) |
+        | test_dir| testname_dir(2) | mhl hash | test_dir/testname_dir(2) | testname_dir(1)/testname_dir(2)/* testname_dir(2)/* |
+
+
+    Scenario Outline: relative test non-ASCII characters in filepaths, system default NFC & NFD
+        Given I'm using 'windows-1251' charset in filepaths
+        And I have the files
+        | orig_number | filename             |
+        | 1           | русский              |
+        | 2           | файлнарусском        |
+        | 3           | русский_file.txt           |
+        | 4           | russian_файлнарусском.тхт  |
+        When I put the given files into special directories
+        | filenumber | orig_number | directory_name |
+        | 1          | 1           | test_dir/russian-каталог/russian-каталог |
+        | 2          | 2           | test_dir/russian-каталог/russian-каталог |
+        | 3          | 3           | test_dir/russian-каталог/нарусскомкаталог |
+        | 4          | 4           | test_dir/russian-каталог/нарусскомкаталог |
+        And from 'test_dir' I run openssl to make md5 and sha1 hashes for files in specified order and I run 'mhl hash' with './russian-каталог'
+        | OS_type         | files_order |
+        | Windows, Darwin | 1, 2, 4, 3  |
+        | Linux           | 1, 2, 4, 3  |
+        Then the outputs of 'mhl hash' and openssl are the same

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hashlist version="1.0">
+
+  <creatorinfo>
+    <name>Simon Wagner</name>
+    <username>simon</username>
+    <hostname>simon-rmacbook.local</hostname>
+    <tool>mhl ver. 0.2.32</tool>
+    <startdate>2016-04-18T14:47:57Z</startdate>
+    <finishdate>2016-04-18T14:47:57Z</finishdate>
+  </creatorinfo>
+
+  <hash>
+    <file>file0.txt</file>
+    <size>555</size>
+    <lastmodificationdate>2016-04-18T14:45:37Z</lastmodificationdate>
+    <null></null>
+    <hashdate>2016-04-18T14:47:57Z</hashdate>
+  </hash>
+
+  <hash>
+    <file>file1.txt</file>
+    <size>305</size>
+    <lastmodificationdate>2016-04-18T14:45:37Z</lastmodificationdate>
+    <null></null>
+    <hashdate>2016-04-18T14:47:57Z</hashdate>
+  </hash>
+
+  <hash>
+    <file>file2.txt</file>
+    <size>218</size>
+    <lastmodificationdate>2016-04-18T14:45:37Z</lastmodificationdate>
+    <null></null>
+    <hashdate>2016-04-18T14:47:57Z</hashdate>
+  </hash>
+
+</hashlist>

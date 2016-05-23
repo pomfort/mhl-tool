@@ -1,0 +1,6 @@
+MD5(files/file0.txt)= a1cae4eeb20d47ca70abbbf058a74e80
+SHA1(files/file1.txt)= 55f554955b29f9cd118ef253e8bab03169e063aa
+xxHash(files/file2.txt)= 1846681932
+xxHash64(files/file3.txt)= 63e68b82b9fb412e
+xxHash64BE(files/file4.txt)= 3e12cdd8d5d6663a
+NULL(files/file0.txt)= 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<hashlist version="1.0">
+
+  <creatorinfo>
+    <name>Anna,,,</name>
+    <username>anna</username>
+    <hostname>ubuntu-12</hostname>
+    <tool>mhlcreate v0.0</tool>
+    <startdate>2012-12-15 18-11-35</startdate>
+    <finishdate>2012-12-15 18-11-35</finishdate>
+  </creatorinfo>
+
+  <hash>
+    <file>한국의_dir/한국어_당근</file>
+    <size>277</size>
+    <lastmodificationdate>2012-12-14 16-19-00</lastmodificationdate>
+    <md5 bit="128" encoding="hex">d29593e2cf81c621fb3c4089f9bbde4a</md5>
+    <hashdate>2012-12-15 18-11-35</hashdate>
+  </hash>
+
+  <hash>
+    <file>한국의_dir/한국어의파일</file>
+    <size>277</size>
+    <lastmodificationdate>2012-12-14 16-16-52</lastmodificationdate>
+    <md5 bit="128" encoding="hex">d29593e2cf81c621fb3c4089f9bbde4a</md5>
+    <hashdate>2012-12-15 18-11-35</hashdate>
+  </hash>
+
+</hashlist>
