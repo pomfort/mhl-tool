@@ -55,6 +55,14 @@ Dependencies: `libxml2-devel` `openssl-devel`
 
 After calling `make release` the results will be placed in `bin/Ubuntu_12.04_x64/Release`
 
+Build instructions for CentOS 7:
+
+	sudo yum groupinstall "Development Tools"
+	sudo yum install openssl-devel
+	sudo yum install libxml2-devel
+	cd dev_envs/Ubuntu_12.04_x64
+	make release
+
 #### Building on Windows
 
 It should be possible to build the sources on Windows using Visual Studio 2013 or 2010

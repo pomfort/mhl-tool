@@ -177,9 +177,6 @@ endef
 
 $(foreach BUILD_T,$(BUILD_TYPES),$(eval $(call TARGET_DEF,$(BUILD_T))))
 
-configure:
-	$(CONFIGURE_COMMON_DIR)/get_build_version.py
-
 clean: $(RELEASE_CONFIG_NAME)-clean $(DEBUG_CONFIG_NAME)-clean
 
 $(RELEASE_CONFIG_NAME)-clean $(DEBUG_CONFIG_NAME)-clean:
