@@ -1,5 +1,10 @@
-#mhl-tool
+# mhl-tool
+
 The MHL tool is a reference implementation for creating and verifying MHL files (http://mediahashlist.org/). It's a cross-platform command line tool, available for Mac OS X, Linux and Windows that allows to create and verify MHL files.
+
+> Please note that there are currently efforts on the way of specifying a version 2 of MHL. 
+> 
+> The specification process is taking place at the Advanced Data Management Subcommittee of the ASC Motion Imaging Technology Council at the [American Society of Cinematographers](https://theasc.com) (ASC). 
 
 #### Context
 
