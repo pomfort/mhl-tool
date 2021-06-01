@@ -23,14 +23,14 @@
  SOFTWARE.
  */
 #include <stdio.h>
-#include <openssl/md5.h>
-#include <openssl/sha.h>
 #include <wchar.h>
 
 #include <facade_info/error_codes.h>
 #include <generics/os_check.h>
 #include <generics/std_funcs_os_anonymizer.h>
 #include <generics/filesystem_handlers/public_interface.h>
+
+#import <CommonCrypto/CommonDigest.h>
 
 #include <mhltools_common/logging.h>
 #include "hashing.h"
@@ -66,7 +66,7 @@ int wcalculate_md5_hash(
   int res;
   FILE* fd;
   size_t bytes_read;
-  MD5_CTX md5_ctx; 
+  CC_MD5_CTX md5_ctx;
   //unsigned char md5_hash[MD5_DIGEST_LENGTH];
   unsigned char data_buff[FILE_DATA_BUFF_SZ];
   size_t bytesReadForLogging;
@@ -87,7 +87,7 @@ int wcalculate_md5_hash(
   //TODO: remoce these comments if they are not needed
   //   OPENSSL_init_library(); 
   //   OPENSSL_init();  
-  res = MD5_Init(&md5_ctx);
+  res = CC_MD5_Init(&md5_ctx);
   if (res != 1)
   {
     fclose(fd);
@@ -122,7 +122,7 @@ int wcalculate_md5_hash(
       break;
     }
     
-    res = MD5_Update(&md5_ctx, data_buff, bytes_read);
+    res = CC_MD5_Update(&md5_ctx, data_buff, bytes_read);
     if (res != 1)
     {
       fclose(fd);
@@ -141,13 +141,13 @@ int wcalculate_md5_hash(
   
   fclose(fd);
   
-  *hash_data = calloc(MD5_DIGEST_LENGTH, sizeof(unsigned char));
+  *hash_data = calloc(CC_MD5_DIGEST_LENGTH, sizeof(unsigned char));
   if (*hash_data == 0)
   {
     return ERRCODE_OUT_OF_MEM;
   }
   
-  res = MD5_Final(*hash_data, &md5_ctx);
+  res = CC_MD5_Final(*hash_data, &md5_ctx);
   if (res != 1)
   {
     return ERRCODE_OPENSSL_ERROR;
@@ -210,7 +210,7 @@ int md5_hash_data_to_string(
 {
   return 
     aux_hash_data_to_string(
-      hash_data, MD5_DIGEST_LENGTH, hash_str, hash_str_sz);
+      hash_data, CC_MD5_DIGEST_LENGTH, hash_str, hash_str_sz);
 }
 
 int wcalculate_md5_hash_string(
@@ -293,7 +293,7 @@ int wcalculate_sha1_hash(
   int res;
   FILE* fd;
   size_t bytes_read;
-  SHA_CTX sha1_ctx; 
+  CC_SHA1_CTX sha1_ctx;
   unsigned char data_buff[FILE_DATA_BUFF_SZ];
   size_t bytesReadForLogging;
   
@@ -310,7 +310,7 @@ int wcalculate_sha1_hash(
     return ERRCODE_NO_SUCH_FILE;
   }
   
-  res = SHA1_Init(&sha1_ctx);
+  res = CC_SHA1_Init(&sha1_ctx);
   if (res != 1)
   {
     fclose(fd);
@@ -348,7 +348,7 @@ int wcalculate_sha1_hash(
       break;
     }
     
-    res = SHA1_Update(&sha1_ctx, data_buff, bytes_read);
+    res = CC_SHA1_Update(&sha1_ctx, data_buff, bytes_read);
     if (res != 1)
     {
       fclose(fd);
@@ -367,13 +367,13 @@ int wcalculate_sha1_hash(
   fclose(fd);
   
   *hash_data = 
-    (unsigned char*) calloc(SHA_DIGEST_LENGTH, sizeof(unsigned char));
+    (unsigned char*) calloc(CC_SHA1_DIGEST_LENGTH, sizeof(unsigned char));
   if (*hash_data == 0)
   {
     return ERRCODE_OUT_OF_MEM;
   }
   
-  res = SHA1_Final(*hash_data, &sha1_ctx);
+  res = CC_SHA1_Final(*hash_data, &sha1_ctx);
   if (res != 1)
   {
     return ERRCODE_OPENSSL_ERROR;
@@ -390,7 +390,7 @@ int sha1_hash_data_to_string(
 {
   return 
   aux_hash_data_to_string(
-    hash_data, SHA_DIGEST_LENGTH, hash_str, hash_str_sz);
+    hash_data, CC_SHA1_DIGEST_LENGTH, hash_str, hash_str_sz);
 }
 
 int wcalculate_sha1_hash_string(
