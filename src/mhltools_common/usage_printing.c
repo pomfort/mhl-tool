@@ -46,7 +46,7 @@ void mhlhash_usage()
 {
   printf("Usage: \n"
          "mhl hash [-v | -vv] "/*[-y]*/" -f FILE -h [md5|sha1|xxhash|xxhash64] HASH\n"
-         "mhl hash [-v | -vv] "/*[-y]*/" [-m] [-#] [-t] [md5|sha1] FILEPATTERNS...\n\n");
+         "mhl hash [-v | -vv] "/*[-y]*/" [-m] [-#] [-t] [md5|sha1|xxhash|xxhash64] FILEPATTERNS...\n\n");
 }
 
 void mhlseal_usage()
