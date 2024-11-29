@@ -93,6 +93,14 @@ char* wfilename_to_locale_filename(const wchar_t* wfn)
     return 0;
   }
 
+  int index = 0;
+  while(locenc_buf[index])
+  {
+          if(locenc_buf[index] == '\\')
+                  locenc_buf[index] = '/';
+          index++;
+  }
+
   return locenc_buf;
 }
 #endif
